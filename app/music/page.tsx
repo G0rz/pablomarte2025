@@ -1,5 +1,5 @@
 import { title } from "@/components/primitives";
-import TiltedCard from "@/components/TiltedCard";
+import TiltedCard from "@/components/tiltedCard";
 
 export default function MusicPage() {
   return (

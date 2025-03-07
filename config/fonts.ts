@@ -12,6 +12,6 @@ export const fontMono = FontMono({
 });
 
 export const fontTT = localFont({
-  src: "../styles/TT Firs Neue Trial Regular.ttf",
+  src: "../styles/TT Firs Neue Trial Regular.woff2",
   variable: "--font-sans-serif",
 });

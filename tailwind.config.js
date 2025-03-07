@@ -1,4 +1,4 @@
-import { heroui } from "@heroui/theme";
+import {heroui} from "@heroui/theme";
 
 /** @type {import("tailwindcss").Config} */
 module.exports = {
@@ -15,11 +15,11 @@ module.exports = {
     themes: {
       light: {
         colors: {
-          background: "#FFFFFF", foreground: "#595960"
+          background: "#F4F3F2", foreground: "#121212", primary: "#E75B37", default: "#121212"
         }
       }, dark: {
         colors: {
-          background: "#121212", foreground: "#A0A0A0"
+          background: "#121212", foreground: "#F4F3F2", primary: "#E75B37", default: "#F4F3F2"
         }
       }
     }

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { IconSvgProps } from "@/types";
+import {IconSvgProps} from "@/types";
 
 export const Logo: React.FC<IconSvgProps> = ({
                                                size = 36,
@@ -127,6 +127,62 @@ export const TwitterIcon: React.FC<IconSvgProps> = ({
         d="M13.795 10.533 20.68 2h-3.073l-5.255 6.517L7.69 2H1l7.806 10.91L1.47 22h3.074l5.705-7.07L15.31 22H22l-8.205-11.467Zm-2.38 2.95L9.97 11.464 4.36 3.627h2.31l4.528 6.317 1.443 2.02 6.018 8.409h-2.31l-4.934-6.89Z" />
     </svg>
   );
+};
+
+export const AngleUpIcon: React.FC<IconSvgProps> = ({
+                                                        size = 24,
+                                                        width,
+                                                        height,
+                                                        ...props
+                                                    }) => {
+    return (
+        <svg height={size || height}
+             viewBox="0 0 24 24"
+             width={size || width}
+             {...props}
+             aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+             fill="none">
+            <path stroke="white" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m5 15 7-7 7 7"/>
+        </svg>
+    );
+};
+
+export const ArrowRightIcon: React.FC<IconSvgProps> = ({
+                                                           size = 24,
+                                                           width,
+                                                           height,
+                                                           ...props
+                                                       }) => {
+    return (
+        <svg height={size || height}
+             viewBox="0 0 24 24"
+             width={size || width}
+             {...props}
+             aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+             fill="none">
+            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                  d="M19 12H5m14 0-4 4m4-4-4-4"/>
+        </svg>
+    );
+};
+
+export const SpotifyIcon: React.FC<IconSvgProps> = ({
+                                                        size = 24,
+                                                        width,
+                                                        height,
+                                                        ...props
+                                                    }) => {
+    return (
+        <svg height={size || height}
+             viewBox="-2 -2 24 24"
+             width={size || width}
+             {...props}
+             aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+             fill="currentColor">
+            <path
+                d="M9.992 0C4.474 0 0 4.474 0 9.992s4.474 9.992 9.992 9.992 9.992-4.474 9.992-9.992S15.51 0 9.992 0m4.348 15.683c-.127.329-.355.512-.59.512a.52.52 0 0 1-.344-.141c-1.796-1.588-3.87-1.843-5.294-1.778-1.578.073-2.735.544-2.747.549-.363.15-.74-.174-.839-.724-.1-.55.114-1.119.477-1.27.052-.022 1.297-.534 3.029-.62a9 9 0 0 1 2.917.32 8.1 8.1 0 0 1 3.146 1.737c.326.289.436.922.245 1.415m1.27-3.063c-.15.329-.42.512-.699.512a.68.68 0 0 1-.407-.141c-2.127-1.588-4.584-1.843-6.271-1.778-1.87.073-3.24.544-3.253.549-.431.15-.876-.174-.995-.724-.118-.55.135-1.119.566-1.27.061-.022 1.536-.534 3.587-.62 1.208-.051 2.37.057 3.456.32a10.2 10.2 0 0 1 3.726 1.737c.386.288.516.922.29 1.415m.782-2.996a.96.96 0 0 1-.5-.142C10.835 6.404 4.276 8.234 4.21 8.252c-.528.153-1.075-.17-1.22-.721s.165-1.12.693-1.272c.076-.022 1.885-.534 4.4-.62a18.6 18.6 0 0 1 4.24.32c1.686.333 3.223.917 4.57 1.738.474.288.633.921.357 1.414a.99.99 0 0 1-.858.513"/>
+        </svg>
+    );
 };
 
 export const MoonFilledIcon = ({

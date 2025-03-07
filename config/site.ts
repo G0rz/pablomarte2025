@@ -18,6 +18,10 @@ export const siteConfig = {
     // }
   ],
   navMenuItems: [
+    {
+      label: "Inicio",
+      href: "/"
+    },
     // {
     //   label: "Music",
     //   href: "/music"
