@@ -9,7 +9,7 @@ export const siteConfig = {
       href: "/music",
     },
     {
-      label: "Projectos",
+      label: "Proyectos",
       href: "/projects",
     },
     // {
@@ -27,7 +27,7 @@ export const siteConfig = {
       href: "/music",
     },
     {
-      label: "Projectos",
+      label: "Proyectos",
       href: "/projects",
     },
     // {

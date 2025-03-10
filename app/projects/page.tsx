@@ -8,7 +8,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="flex flex-col gap-8">
-      <h1 className={title()}>Projectos</h1>
+      <h1 className={title()}>Proyectos</h1>
       <Table
         hideHeader
         aria-label="Example static collection table"
