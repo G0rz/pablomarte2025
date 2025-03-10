@@ -45,7 +45,7 @@ export default function Home() {
           <SplitText
               animationFrom={{opacity: 0, transform: "translate3d(0,50px,0)"}}
               animationTo={{opacity: 1, transform: "translate3d(0,0,0)"}}
-              className="font-normal text-6xl md:text-9xl text-center"
+              className="font-normal text-4xl md:text-9xl text-center"
               delay={150}
               text="Pablo Marte"
               threshold={0.5}
