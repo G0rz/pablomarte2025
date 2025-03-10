@@ -18,7 +18,8 @@ export const metadata: Metadata = {
     description: siteConfig.description,
     icons: {
         icon: "/favicon.ico"
-    }
+    },
+
 };
 
 export const viewport: Viewport = {
@@ -40,7 +41,7 @@ export default function RootLayout({
         <Providers themeProps={{attribute: "class", defaultTheme: "dark"}}>
             <div className="flex flex-col ">
                 <Navbar/>
-                <main className="min-h-screen flex-grow pt-2 md:pt-10 text-justify">
+                <main className="min-h-screen flex-grow pt-2 md:pt-10">
                     {children}
                 </main>
                 <footer className="flex items-center justify-center py-4">

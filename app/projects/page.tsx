@@ -8,7 +8,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="flex flex-col gap-8">
-      <h1 className={title()}>Projects</h1>
+      <h1 className={title()}>Projectos</h1>
       <Table
         hideHeader
         aria-label="Example static collection table"
@@ -45,11 +45,11 @@ export default function ProjectsPage() {
       <h2 className={title()}>Tour</h2>
       <Table aria-label="Example empty table">
         <TableHeader>
-          <TableColumn>DATE</TableColumn>
-          <TableColumn>CITY</TableColumn>
-          <TableColumn>TICKETS</TableColumn>
+          <TableColumn>FECHA</TableColumn>
+          <TableColumn>CIUDAD</TableColumn>
+          <TableColumn>BOLETOS</TableColumn>
         </TableHeader>
-        <TableBody emptyContent={"COOMING SOON"}>{[]}</TableBody>
+        <TableBody emptyContent={"PRÓXIMAMENTE"}>{[]}</TableBody>
       </Table>
     </div>
   );

@@ -2,15 +2,15 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Pablo Marte Official Website - News, Music, Tours & More",
-  description: "",
+  description: "Pablo Marte es un artista musical mexicano de 27 años que se ha destacado en la escena indie pop y alternativa...",
   navItems: [
-    // {
-    //   label: "Music",
-    //   href: "/music"
-    // },
+    {
+      label: "Music",
+      href: "/music",
+    },
     {
       label: "Projects",
-      href: "/projects"
+      href: "/projects",
     },
     // {
     //   label: "Contact",
@@ -20,15 +20,15 @@ export const siteConfig = {
   navMenuItems: [
     {
       label: "Inicio",
-      href: "/"
+      href: "/",
     },
-    // {
-    //   label: "Music",
-    //   href: "/music"
-    // },
+    {
+      label: "Music",
+      href: "/music",
+    },
     {
       label: "Projects",
-      href: "/projects"
+      href: "/projects",
     },
     // {
     //   label: "Contact",
