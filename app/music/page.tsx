@@ -42,7 +42,7 @@ export default function MusicPage() {
   return (
       <>
       <div className="text-center w-full my-4 md:my-10">
-          <h1 className={title()}>Canciones</h1>
+          <h1 className={title()}>Musica</h1>
         </div>
         <div className="flex flex-wrap items-center justify-center">
           {songsList.length && songsList.map((song, index) => {
