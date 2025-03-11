@@ -9,10 +9,10 @@ export interface LinksListProps {
 
 export const LinksList: FC<LinksListProps> = ({label, link, color}) => {
     return <div className=" w-full">
-        <Listbox className="" aria-label="List of links with icons"
+        <Listbox aria-label="List of links with icons" className=""
                  variant="bordered">
             <ListboxItem color={color}>
-                <Link showAnchorIcon isExternal={true} color={color} href={link}>
+                <Link showAnchorIcon color={color} href={link} isExternal={true}>
                     {label}
                 </Link>
             </ListboxItem>

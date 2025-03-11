@@ -47,6 +47,7 @@ export default function Home() {
               animationTo={{opacity: 1, transform: "translate3d(0,0,0)"}}
               className="font-normal text-4xl md:text-9xl text-center"
               delay={150}
+              rootMargin="-50px"
               text="Pablo Marte"
               threshold={0.5}
           />

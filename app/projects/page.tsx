@@ -12,7 +12,6 @@ export default function ProjectsPage() {
       <Table
         hideHeader
         aria-label="Example static collection table"
-        isStriped={true}
       >
         <TableHeader>
           <TableColumn>DATE</TableColumn>
