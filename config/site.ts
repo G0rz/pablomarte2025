@@ -5,7 +5,7 @@ export const siteConfig = {
   description: "Pablo Marte es un artista musical mexicano de 27 años que se ha destacado en la escena indie pop y alternativa...",
   navItems: [
     {
-      label: "Musica",
+      label: "Música",
       href: "/music",
     },
     {
@@ -23,7 +23,7 @@ export const siteConfig = {
       href: "/",
     },
     {
-      label: "Musica",
+      label: "Música",
       href: "/music",
     },
     {
