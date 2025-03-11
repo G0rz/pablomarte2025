@@ -1,6 +1,19 @@
-"use client"
+"use client";
 
-import {Button, Card, CardFooter, Image, useDisclosure} from "@heroui/react";
+import {
+  Button,
+  Card,
+  CardFooter,
+  Drawer,
+  DrawerBody,
+  DrawerContent,
+  DrawerFooter,
+  DrawerHeader,
+  Image,
+  useDisclosure,
+} from "@heroui/react";
+import { useState } from "react";
+
 import tequieroati from "../../public/images/tequieroati2.webp";
 import luna from "../../public/images/luna.webp";
 import particulas from "../../public/images/particulas.webp";
@@ -14,13 +27,13 @@ import lenaalfuego from "../../public/images/lenaalfuego.webp";
 import tiempodequerer from "../../public/images/tiempodequerer.webp";
 import petricor from "../../public/images/petricor.webp";
 
-import {title} from "@/components/primitives";
-import {CustomDrawer} from "@/components/customDrawer";
+import { title } from "@/components/primitives";
+import { LinksList } from "@/components/linksList";
 
 const songsList = [
   {
     id: 12,
-    title: 'Luna',
+    title: "Luna",
     image: luna.src,
     description: "La luz de tu amor en mi eterna oscuridad.",
     links: [
@@ -44,12 +57,13 @@ const songsList = [
         link: "https://open.qobuz.com/album/p21mo1490rmic",
         color: "default",
       },
-    ], active: true
+    ],
+    active: true,
   },
   {
     id: 11,
-    title: 'Te Quiero A Ti',
-  image: tequieroati.src,
+    title: "Te Quiero A Ti",
+    image: tequieroati.src,
     description: "Un eco eterno de deseo y certeza.",
     links: [
       {
@@ -72,11 +86,12 @@ const songsList = [
         link: "https://open.qobuz.com/album/wyclop3sa2yzb",
         color: "default",
       },
-    ], active: true
+    ],
+    active: true,
   },
   {
     id: 10,
-    title: 'Partículas',
+    title: "Partículas",
     image: particulas.src,
     description: "Fragmentos de un amor que trasciende el tiempo.",
     links: [
@@ -100,11 +115,12 @@ const songsList = [
         link: "https://open.qobuz.com/album/j3qshezo8vp8a",
         color: "default",
       },
-    ], active: true
+    ],
+    active: true,
   },
   {
     id: 9,
-    title: 'Tu Amor Que Nunca Fue - Acoustic Version',
+    title: "Tu Amor Que Nunca Fue - Acoustic Version",
     image: taqnf.src,
     description: "Un susurro al viento, esperando respuesta.",
     links: [
@@ -128,11 +144,12 @@ const songsList = [
         link: "https://open.qobuz.com/album/evkwf92gvyyac",
         color: "default",
       },
-    ], active: true
+    ],
+    active: true,
   },
   {
     id: 8,
-    title: 'Al Ritmo De La Luz',
+    title: "Al Ritmo De La Luz",
     image: ardll.src,
     description: "Un baile eterno entre sombras y estrellas.",
     links: [
@@ -156,11 +173,12 @@ const songsList = [
         link: "https://open.qobuz.com/album/hsfsd07oxmaoc",
         color: "default",
       },
-    ], active: true
+    ],
+    active: true,
   },
   {
     id: 7,
-    title: 'Galaxias',
+    title: "Galaxias",
     image: galaxias.src,
     description: "Dos almas orbitando un destino inevitable.",
     links: [
@@ -184,11 +202,12 @@ const songsList = [
         link: "https://open.qobuz.com/album/hq9z5l4lj78ga",
         color: "default",
       },
-    ], active: true
+    ],
+    active: true,
   },
   {
     id: 6,
-    title: 'Nightingale',
+    title: "Nightingale",
     image: nightingale.src,
     description: "La melodía secreta que solo el alma entiende.",
     links: [
@@ -212,11 +231,12 @@ const songsList = [
         link: "https://open.qobuz.com/album/a5xrcl3amke3a",
         color: "default",
       },
-    ], active: true
+    ],
+    active: true,
   },
   {
     id: 5,
-    title: 'Paisaje',
+    title: "Paisaje",
     image: paisaje.src,
     description: "La silueta de tu amor dibujada en el horizonte.",
     links: [
@@ -240,67 +260,70 @@ const songsList = [
         link: "https://open.qobuz.com/album/m9zziigikd2pb",
         color: "default",
       },
-    ], active: true
+    ],
+    active: true,
   },
   {
     id: 4,
-    title: 'Luminiscencia',
+    title: "Luminiscencia",
     image: luminiscencia.src,
     description: "Destellos de un amor que nunca deja de brillar.",
-  links: [
-    {
-      label: "Spotify",
-      link: "https://open.spotify.com/album/5SBjQelg4jZb7gU5ZbuXxA?si=HGhCWNl-QvOAmpdpSAbqpg",
-      color: "success",
-    },
-    {
-      label: "Youtube Music",
-      link: "https://music.youtube.com/watch?v=Bo7X_G6WEgI&feature=shared",
-      color: "danger",
-    },
-    {
-      label: "Deezer",
-      link: "https://dzr.page.link/5WsgiqSSaTG2ca9m7",
-      color: "secondary",
-    },
-    // {
-    //   label: "qobuz",
-    //   link: "https://open.qobuz.com/album/wyclop3sa2yzb",
-    //   color: "default",
-    // },
-  ], active: true
+    links: [
+      {
+        label: "Spotify",
+        link: "https://open.spotify.com/album/5SBjQelg4jZb7gU5ZbuXxA?si=HGhCWNl-QvOAmpdpSAbqpg",
+        color: "success",
+      },
+      {
+        label: "Youtube Music",
+        link: "https://music.youtube.com/watch?v=Bo7X_G6WEgI&feature=shared",
+        color: "danger",
+      },
+      {
+        label: "Deezer",
+        link: "https://dzr.page.link/5WsgiqSSaTG2ca9m7",
+        color: "secondary",
+      },
+      // {
+      //   label: "qobuz",
+      //   link: "https://open.qobuz.com/album/wyclop3sa2yzb",
+      //   color: "default",
+      // },
+    ],
+    active: true,
   },
   {
     id: 3,
-    title: 'Leña Al Fuego',
+    title: "Leña Al Fuego",
     image: lenaalfuego.src,
     description: "Un incendio de pasión que devora el tiempo.",
     links: [
       {
         label: "Spotify",
         link: "https://open.spotify.com/album/15jLxjem402oC1CqwmaYE5?si=VGSPmrh2SjeoIN9Ko62VGw",
-      color: "success",
-    },
-    {
-      label: "Youtube Music",
-      link: "https://music.youtube.com/watch?v=cw8eMB0ie0Y&feature=shared",
-      color: "danger",
-    },
-    {
-      label: "Deezer",
-      link: "https://dzr.page.link/pxCDsN754MbK47qA9",
-      color: "secondary",
-    }
+        color: "success",
+      },
+      {
+        label: "Youtube Music",
+        link: "https://music.youtube.com/watch?v=cw8eMB0ie0Y&feature=shared",
+        color: "danger",
+      },
+      {
+        label: "Deezer",
+        link: "https://dzr.page.link/pxCDsN754MbK47qA9",
+        color: "secondary",
+      },
       // {
       //   label: "qobuz",
       //   link: "https://open.qobuz.com/album/wyclop3sa2yzb",
       //   color: "default",
       // },
-  ], active: true
+    ],
+    active: true,
   },
   {
     id: 2,
-    title: 'Tiempo De Querer',
+    title: "Tiempo De Querer",
     image: tiempodequerer.src,
     description: "Un amor que florece en el instante perfecto.",
     links: [
@@ -318,17 +341,18 @@ const songsList = [
         label: "Deezer",
         link: "https://dzr.page.link/whZB2FTru9APzRzk8",
         color: "secondary",
-      }
+      },
       // {
       //   label: "qobuz",
       //   link: "https://open.qobuz.com/album/wyclop3sa2yzb",
       //   color: "default",
       // },
-    ], active: true
+    ],
+    active: true,
   },
   {
     id: 1,
-    title: 'Petricor',
+    title: "Petricor",
     image: petricor.src,
     description: "La nostalgia perfumada de un amor bajo la lluvia.",
     links: [
@@ -346,52 +370,114 @@ const songsList = [
         label: "Deezer",
         link: "https://dzr.page.link/hAM5oakgjAfoUeSX7",
         color: "secondary",
-      }
+      },
       // {
       //   label: "qobuz",
       //   link: "https://open.qobuz.com/album/wyclop3sa2yzb",
       //   color: "default",
       // },
-    ], active: true
+    ],
+    active: true,
   },
-]
+];
 
 export default function MusicPage() {
-  const {isOpen, onOpen, onOpenChange} = useDisclosure();
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [currentSong, setCurrentSong] = useState<any>();
 
   return (
-      <>
+    <>
       <div className="text-center w-full my-4 md:my-10">
-          <h1 className={title()}>Musica</h1>
-        </div>
-        <div className="flex flex-wrap items-center justify-center gap-6 md:px-16">
-          {songsList.length && songsList.map((song) => {
-            return <Card key={song.id} isFooterBlurred className="border-none" radius="lg">
-              <Image
+        <h1 className={title()}>Musica</h1>
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-6 md:px-16">
+        {songsList.length &&
+          songsList.map((song, index) => {
+            return (
+              <Card
+                key={index}
+                isFooterBlurred
+                className="border-none"
+                radius="lg"
+              >
+                <Image
                   alt="Woman listing to music"
                   className="object-cover"
                   height={250}
-                  width={250}
                   src={song.image}
-              />
-              <CardFooter
-                  className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                <p className="text-tiny text-white/80">{song.title.length ? song.title : 'Próximamente'}</p>
-                <Button
+                  width={250}
+                />
+                <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
+                  <p className="text-tiny text-white/80" style={{textShadow: '1px 0 lightgray'}}>
+                    {song.title.length ? song.title : "Próximamente"}
+                  </p>
+                  <Button
                     className="text-tiny text-white bg-black/20"
                     color="default"
                     radius="lg"
                     size="sm"
                     variant="flat"
-                    onPress={onOpen}
-                >
-                  {song.active ? 'Ver más' : 'Próximamente'}
-                </Button>
-                <CustomDrawer isOpen={isOpen} onOpenChange={onOpenChange} song={song}/>
-              </CardFooter>
-            </Card>
+                    onPress={() => {
+                      onOpen();
+                      setCurrentSong(song);
+                    }}
+                  >
+                    {song.active ? "Ver más" : "Próximamente"}
+                  </Button>
+                </CardFooter>
+              </Card>
+            );
           })}
-        </div>
-      </>
+      </div>
+      <Drawer
+        backdrop={"transparent"}
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+      >
+        <DrawerContent>
+          {(onClose) => (
+            <>
+              <DrawerHeader className="flex flex-col gap-1">
+                {currentSong.title}
+              </DrawerHeader>
+              <DrawerBody className={"flex items-center justify-start"}>
+                <Image
+                  alt={currentSong.title}
+                  className="object-cover"
+                  height={250}
+                  src={currentSong.image}
+                  width={250}
+                />
+                <p>{currentSong.description}</p>
+                {currentSong.links.length > 0 ? (
+                  currentSong.links.map(
+                    (
+                      element: { label: string; color: any; link: string },
+                      index: number,
+                    ) => {
+                      return (
+                        <LinksList
+                          key={index}
+                          color={element.color}
+                          label={element.label}
+                          link={element.link}
+                        />
+                      );
+                    },
+                  )
+                ) : (
+                  <p>Próximamente</p>
+                )}
+              </DrawerBody>
+              <DrawerFooter>
+                <Button color="primary" variant="light" onPress={onClose}>
+                  Cerrar
+                </Button>
+              </DrawerFooter>
+            </>
+          )}
+        </DrawerContent>
+      </Drawer>
+    </>
   );
 }
