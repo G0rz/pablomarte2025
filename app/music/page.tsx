@@ -7,12 +7,13 @@ import {
   Drawer,
   DrawerBody,
   DrawerContent,
-  DrawerFooter,
   DrawerHeader,
   Image,
+  Tooltip,
   useDisclosure,
 } from "@heroui/react";
-import { useState } from "react";
+import {useState} from "react";
+
 
 import tequieroati from "../../public/images/tequieroati2.webp";
 import luna from "../../public/images/luna.webp";
@@ -27,8 +28,10 @@ import lenaalfuego from "../../public/images/lenaalfuego.webp";
 import tiempodequerer from "../../public/images/tiempodequerer.webp";
 import petricor from "../../public/images/petricor.webp";
 
-import { title } from "@/components/primitives";
-import { LinksList } from "@/components/linksList";
+import {title} from "@/components/primitives";
+import {LinksList} from "@/components/linksList";
+import Head from "next/head";
+import {AngleLeftIcon} from "@/components/icons";
 
 const songsList = [
   {
@@ -56,7 +59,7 @@ const songsList = [
         label: "qobuz",
         link: "https://open.qobuz.com/album/p21mo1490rmic",
         color: "default",
-      },
+      }
     ],
     active: true,
   },
@@ -387,58 +390,71 @@ export default function MusicPage() {
 
   return (
     <>
+      <Head>
+        <title>Pablo Marte - New Projects && Tour</title>
+        <meta content="Stay tunned " name="description"/>
+        <link href="https://pablo-marte.com/" rel="canonical"/>
+      </Head>
       <div className="text-center w-full my-4 md:my-10">
         <h1 className={title()}>Música</h1>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-6 md:px-16">
+        {/*<div className="w-full flex flex-col">*/}
+        {/*  <div><p>View: </p></div>*/}
+        {/*  <div><Button isIconOnly>List</Button>*/}
+        {/*    <Button isIconOnly>Grid</Button></div>*/}
+        {/*</div>*/}
         {songsList.length &&
           songsList.map((song, index) => {
             return (
               <Card
                 key={index}
                 isFooterBlurred
-                className="border-none"
+                className="border-none flex w-2/3 md:w-1/5 "
                 radius="lg"
               >
-                <Image
-                  alt="Woman listing to music"
-                  className="object-cover"
-                  height={250}
-                  src={song.image}
-                  width={250}
-                />
-                <CardFooter className="justify-between before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 z-10">
-                  <p className="text-tiny text-white/80" style={{textShadow: '1px 0 lightgray'}}>
-                    {song.title.length ? song.title : "Próximamente"}
-                  </p>
-                  <Button
-                    className="text-tiny text-white bg-black/20"
-                    color="default"
-                    radius="lg"
-                    size="sm"
-                    variant="flat"
+                <Button
+                    className="border-none size-full p-0"
+                    variant="ghost"
                     onPress={() => {
                       onOpen();
                       setCurrentSong(song);
                     }}
-                  >
-                    {song.active ? "Ver más" : "Próximamente"}
-                  </Button>
+                >
+                  {song.active ? <Image
+                      alt="Woman listing to music"
+                      src={song.image}
+                  /> : "Próximamente"}
+                </Button>
+                <CardFooter
+                    className="font-bold justify-center bg-[#121212]/30 before:bg-white/10 border-white/20 border-1 overflow-hidden py-1 absolute before:rounded-xl rounded-large bottom-1 w-[calc(100%_-_8px)] shadow-small ml-1 py-2 z-10">
+                  <p className="text-tiny text-white/90">
+                    {song.title.length ? song.title : "Próximamente"}
+                  </p>
                 </CardFooter>
               </Card>
             );
           })}
       </div>
-      <Drawer
-        backdrop={"transparent"}
-        isOpen={isOpen}
-        onOpenChange={onOpenChange}
-      >
+      <Drawer backdrop={"blur"} isOpen={isOpen} onOpenChange={onOpenChange} hideCloseButton={true} radius={"none"}>
         <DrawerContent>
           {(onClose) => (
             <>
-              <DrawerHeader className="flex flex-col gap-1">
-                {currentSong.title}
+              <DrawerHeader>
+                <div className={"w-full flex flex-wrap items-center justify-start text-center py-4"}>
+                  <Tooltip content="Close">
+                    <Button
+                        isIconOnly
+                        className="flex w-1/12"
+                        size="sm"
+                        variant="light"
+                        onPress={onClose}
+                    >
+                      <AngleLeftIcon/>
+                    </Button>
+                  </Tooltip>
+                  <div className="flex w-10/12 text-center items-center justify-center">{currentSong.title}</div>
+                </div>
               </DrawerHeader>
               <DrawerBody className={"flex items-center justify-start"}>
                 <Image
@@ -448,11 +464,13 @@ export default function MusicPage() {
                   src={currentSong.image}
                   width={250}
                 />
-                <p>{currentSong.description}</p>
+                <q className={"my-2 italic"}>{currentSong.description}</q>
+                <p className={"font-bold mr-auto"}>Escúchalo en tu plataforma preferida:</p>
+                <div className="w-full flex flex-wrap items-center justify-center mb-4">
                 {currentSong.links.length > 0 ? (
                   currentSong.links.map(
                     (
-                      element: { label: string; color: any; link: string },
+                        element: { label: string; color: any; link: string, icon: any },
                       index: number,
                     ) => {
                       return (
@@ -463,17 +481,16 @@ export default function MusicPage() {
                           link={element.link}
                         />
                       );
-                    },
-                  )
-                ) : (
+                    },)) : (
                   <p>Próximamente</p>
                 )}
+                </div>
               </DrawerBody>
-              <DrawerFooter>
-                <Button color="primary" variant="light" onPress={onClose}>
-                  Cerrar
-                </Button>
-              </DrawerFooter>
+              {/*<DrawerFooter>*/}
+              {/*  <Button color="primary" variant="light" onPress={onClose}>*/}
+              {/*    Cerrar*/}
+              {/*  </Button>*/}
+              {/*</DrawerFooter>*/}
             </>
           )}
         </DrawerContent>

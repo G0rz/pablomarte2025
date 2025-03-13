@@ -95,13 +95,19 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="w-full flex items-center justify-center">
-          <video autoPlay loop muted>
+        <div className="relative flex items-center justify-center w-full h-[30vh] md:h-screen overflow-hidden">
+          <video
+              autoPlay
+              loop
+              muted
+              controls={false}
+              className="absolute z-10 w-auto"
+          >
             <source src="/videos/Galaxias.mp4" type="video/mp4"/>
             Your browser does not support the video tag.
           </video>
         </div>
-        <div className="w-full flex flex-wrap justify-center items-center py-2 md:py-10">
+        <div className="w-full flex flex-wrap justify-center items-center md:py-10">
           <FadeContent
               blur={false}
               className="w-full md:w-1/2 flex flex-wrap md:flex-col justify-center items-center px-8 md:px-10"
@@ -177,28 +183,30 @@ export default function Home() {
             {(onClose) => (
                 <>
                   <ModalHeader className="flex flex-col gap-1 text-center">
-                    Escúchalo en tu plataforma preferida
+                    Escúchalo en tu plataforma preferida:
                   </ModalHeader>
-                  <ModalBody className="flex flex-col items-center justify-center text-center">
-                    {links.length > 0 ? (
-                        links.map((element) => {
-                          return (
-                              <LinksList
-                                  key={element.label}
-                                  color={element.color}
-                                  label={element.label}
-                                  link={element.link}
-                              />
-                          );
-                        })
-                    ) : (
-                        <p>Próximamente</p>
-                    )}
+                  <ModalBody>
+                    <div  className="w-full flex flex-wrap items-center justify-center mb-4">
+                      {links.length > 0 ? (
+                          links.map((element) => {
+                            return (
+                                <LinksList
+                                    key={element.label}
+                                    color={element.color}
+                                    label={element.label}
+                                    link={element.link}
+                                />
+                            );
+                          })
+                      ) : (
+                          <p>Próximamente</p>
+                      )}
+                    </div>
                   </ModalBody>
                   <ModalFooter>
-                    <Button color="primary" variant="light" onPress={onClose}>
-                      Close
-                    </Button>
+                    {/*<Button color="primary" variant="light" onPress={onClose}>*/}
+                    {/*  Close*/}
+                    {/*</Button>*/}
                   </ModalFooter>
                 </>
             )}
