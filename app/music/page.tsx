@@ -41,9 +41,17 @@ const songsList = [
     description: "La luz de tu amor en mi eterna oscuridad.",
     links: [
       {
+        label: "Apple Music",
+        link: "https://music.apple.com/mx/album/luna-single/1778749802",
+        color: "danger",
+      },{
         label: "Spotify",
         link: "https://open.spotify.com/intl-es/track/1Mj7FYp9wc3qjEVWBjdt55?si=45128da3574f44b2",
         color: "success",
+      },{
+        label: "Amazon Music",
+        link: "https://music.amazon.com.mx/albums/B0DMF2VPZJ?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_tfl8IVRTl1Yy2GK0n3iiHzuKF",
+        color: "default",
       },
       {
         label: "Youtube Music",
@@ -70,9 +78,17 @@ const songsList = [
     description: "Un eco eterno de deseo y certeza.",
     links: [
       {
+        label: "Apple Music",
+        link: "https://music.apple.com/mx/album/te-quiero-a-ti/1753498529?i=1753498530",
+        color: "danger",
+      },{
         label: "Spotify",
         link: "https://open.spotify.com/intl-es/track/2eGbbEDMUKoGd3ezp4W3E4?si=f587856a076c4d26",
         color: "success",
+      },{
+        label: "Amazon Music",
+        link: "https://music.amazon.com.mx/albums/B0D7SYWBNW?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_BTthKgi5m4RitjELwPmCYaFGy",
+        color: "default",
       },
       {
         label: "Youtube Music",
@@ -99,9 +115,17 @@ const songsList = [
     description: "Fragmentos de un amor que trasciende el tiempo.",
     links: [
       {
+        label: "Apple Music",
+        link: "https://music.apple.com/mx/album/part%C3%ADculas/1746538885?i=1746538886",
+        color: "danger",
+      },{
         label: "Spotify",
         link: "https://open.spotify.com/album/7KZweZrr93Vu68fJGqX0us?si=TNY9zVAqRk-z0w0wB5P2kQ",
         color: "success",
+      },{
+        label: "Amazon Music",
+        link: "https://music.amazon.com.mx/albums/B0D47RTR6C?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_S8QH1YMqX2PrDl5e1hEsSzVkx",
+        color: "default",
       },
       {
         label: "Youtube Music",
@@ -125,12 +149,20 @@ const songsList = [
     id: 9,
     title: "Tu Amor Que Nunca Fue - Acoustic Version",
     image: taqnf.src,
-    description: "Un susurro al viento, esperando respuesta.",
+    description: "Un susurro al viento, esperando respuesta. \n Esta canción es una celebración del amor auténtico y el compromiso. Las letras transmiten un mensaje optimista sobre la conexión entre dos personas. La melodía es alegre y contagiosa.",
     links: [
       {
+        label: "Apple Music",
+        link: "https://music.apple.com/mx/album/tu-amor-que-nunca-fue-acoustic-version/1746568563?i=1746568565",
+        color: "danger",
+      },{
         label: "Spotify",
         link: "https://open.spotify.com/album/008b2824i5JKHGzaeTEdpU?si=rnqTQj5RSY29cupkHisi3A",
         color: "success",
+      },{
+        label: "Amazon Music",
+        link: "https://music.amazon.com.mx/albums/B0D481Y868?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_EC2NTClWD2JOxD2OQJ8OaDUuS",
+        color: "default",
       },
       {
         label: "Youtube Music",
@@ -157,9 +189,17 @@ const songsList = [
     description: "Un baile eterno entre sombras y estrellas.",
     links: [
       {
+        label: "Apple Music",
+        link: "https://music.apple.com/mx/album/al-ritmo-de-la-luz/1746567063?i=1746567065",
+        color: "danger",
+      },{
         label: "Spotify",
         link: "https://open.spotify.com/album/7akvqvPMKXZD8lKnKTE37h?si=3uN4N0LHTOaQUlFd2dM4Tw",
         color: "success",
+      },{
+        label: "Amazon Music",
+        link: "https://music.amazon.com.mx/albums/B0D47ZK47F?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_TeYucmNyLafdzMVcZTm6ymoN2",
+        color: "default",
       },
       {
         label: "Youtube Music",
@@ -186,9 +226,17 @@ const songsList = [
     description: "Dos almas orbitando un destino inevitable.",
     links: [
       {
+        label: "Apple Music",
+        link: "https://music.apple.com/mx/album/galaxias/1746567714?i=1746567715",
+        color: "danger",
+      },{
         label: "Spotify",
         link: "https://open.spotify.com/album/3YElGAGrxkJf9ZVHoN3I02?si=J59mo_XXTO-dbSj91P2gYA",
         color: "success",
+      },{
+        label: "Amazon Music",
+        link: "https://music.amazon.com.mx/albums/B0D47ZYSPC?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_8acVlItNJRaVJc8F8TkSoxIvG",
+        color: "default",
       },
       {
         label: "Youtube Music",
@@ -212,12 +260,20 @@ const songsList = [
     id: 6,
     title: "Nightingale",
     image: nightingale.src,
-    description: "La melodía secreta que solo el alma entiende.",
+    description: "La melodía secreta que solo el alma entiende. \n El ruiseñor simboliza la búsqueda de identidad y la expresión personal. La canción aborda el deseo de ser escuchado y entendido, utilizando el canto del ruiseñor como una metáfora de la libertad creativa. La producción es melódica, resaltando la vulnerabilidad en la voz de Marte.",
     links: [
       {
+        label: "Apple Music",
+        link: "https://music.apple.com/mx/album/nightingale/1746568259?i=1746568261",
+        color: "danger",
+      },{
         label: "Spotify",
         link: "https://open.spotify.com/album/1gwHne2KNxHYds3YVGjoyQ?si=mA7BbyYVQbiWL-x6BTiCJQ",
         color: "success",
+      },{
+        label: "Amazon Music",
+        link: "https://music.amazon.com.mx/albums/B0D47XHS7Y?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_vlPMbOjCSm4WXN3GttlYZQKRZ",
+        color: "default",
       },
       {
         label: "Youtube Music",
@@ -244,9 +300,17 @@ const songsList = [
     description: "La silueta de tu amor dibujada en el horizonte.",
     links: [
       {
+        label: "Apple Music",
+        link: "https://music.apple.com/mx/album/paisaje/1746567241?i=1746567243",
+        color: "danger",
+      },{
         label: "Spotify",
         link: "https://open.spotify.com/album/5wYMWFsy69a9eTdB61Yt6X?si=E4Q4WnaeTtSK0_inkjdKXw",
         color: "success",
+      },{
+        label: "Amazon Music",
+        link: "https://music.amazon.com.mx/albums/B0D47TLQMK?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_j8DDaH6IEdd4bRQ5PyZptlKu7",
+        color: "default",
       },
       {
         label: "Youtube Music",
@@ -273,9 +337,17 @@ const songsList = [
     description: "Destellos de un amor que nunca deja de brillar.",
     links: [
       {
+        label: "Apple Music",
+        link: "https://music.apple.com/mx/album/luminiscencia/1746568512?i=1746568514",
+        color: "danger",
+      },{
         label: "Spotify",
         link: "https://open.spotify.com/album/5SBjQelg4jZb7gU5ZbuXxA?si=HGhCWNl-QvOAmpdpSAbqpg",
         color: "success",
+      },{
+        label: "Amazon Music",
+        link: "https://music.amazon.com.mx/albums/B0D47ZTPW9?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_XRBO2QbNVsfhk8FBvrXt26ESc",
+        color: "default",
       },
       {
         label: "Youtube Music",
@@ -299,12 +371,20 @@ const songsList = [
     id: 3,
     title: "Leña Al Fuego",
     image: lenaalfuego.src,
-    description: "Un incendio de pasión que devora el tiempo.",
+    description: "Un incendio de pasión que devora el tiempo. \n Esta canción aborda la nostalgia y el deseo, con el fuego como símbolo de pasión y recuerdos. Las letras son emotivas y evocadoras, invitando al oyente a recordar momentos significativos. La melodía suele ser intensa, capturando la esencia de la pasión que perdura a lo largo del tiempo.",
     links: [
       {
+        label: "Apple Music",
+        link: "https://music.apple.com/mx/album/le%C3%B1a-al-fuego/1746569279?i=1746569284",
+        color: "danger",
+      },{
         label: "Spotify",
         link: "https://open.spotify.com/album/15jLxjem402oC1CqwmaYE5?si=VGSPmrh2SjeoIN9Ko62VGw",
         color: "success",
+      },{
+        label: "Amazon Music",
+        link: "https://music.amazon.com.mx/albums/B0D47YXLH9?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_KAMS6ClNlrzpqLdkQtKpgAXEL",
+        color: "default",
       },
       {
         label: "Youtube Music",
@@ -331,9 +411,17 @@ const songsList = [
     description: "Un amor que florece en el instante perfecto.",
     links: [
       {
+        label: "Apple Music",
+        link: "https://music.apple.com/mx/album/tiempo-de-querer/1746568774?i=1746568775",
+        color: "danger",
+      },{
         label: "Spotify",
         link: "https://open.spotify.com/album/2Mhs7SUNynimGufspDXaMs?si=PBm8ZvlrS-uMZqic5R5ojg",
         color: "success",
+      },{
+        label: "Amazon Music",
+        link: "https://music.amazon.com.mx/albums/B0D47ZQ2X9?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_Qjy5zlplIKgQCDiP010FclFPY",
+        color: "default",
       },
       {
         label: "Youtube Music",
@@ -360,9 +448,17 @@ const songsList = [
     description: "La nostalgia perfumada de un amor bajo la lluvia.",
     links: [
       {
+        label: "Apple Music",
+        link: "https://music.apple.com/mx/album/petricor/1746569375?i=1746569376",
+        color: "danger",
+      },{
         label: "Spotify",
         link: "https://open.spotify.com/album/7BoBjCLhn4BXvA0CaBhW2a?si=QGuiumz2QNSM5QB81Qo8GA",
         color: "success",
+      },{
+        label: "Amazon Music",
+        link: "https://music.amazon.com.mx/albums/B0D47ZY6CQ?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_kqWGLjIN2sKUGqXI9YChW8wJw",
+        color: "default",
       },
       {
         label: "Youtube Music",
@@ -422,7 +518,7 @@ export default function MusicPage() {
                     }}
                 >
                   {song.active ? <Image
-                      alt="Woman listing to music"
+                      alt="Woman listening to music"
                       src={song.image}
                   /> : "Próximamente"}
                 </Button>
@@ -441,7 +537,7 @@ export default function MusicPage() {
           {(onClose) => (
             <>
               <DrawerHeader>
-                <div className={"w-full flex flex-wrap items-center justify-start text-center py-4"}>
+                <div className="w-full flex flex-wrap items-center justify-start text-center py-4">
                   <Tooltip content="Close">
                     <Button
                         isIconOnly
@@ -456,7 +552,7 @@ export default function MusicPage() {
                   <div className="flex w-10/12 text-center items-center justify-center">{currentSong.title}</div>
                 </div>
               </DrawerHeader>
-              <DrawerBody className={"flex items-center justify-start"}>
+              <DrawerBody className="flex items-center justify-start">
                 <Image
                   alt={currentSong.title}
                   className="object-cover"
@@ -464,9 +560,9 @@ export default function MusicPage() {
                   src={currentSong.image}
                   width={250}
                 />
-                <q className={"my-2 italic"}>{currentSong.description}</q>
-                <p className={"font-bold mr-auto"}>Escúchalo en tu plataforma preferida:</p>
-                <div className="w-full flex flex-wrap items-center justify-center mb-4">
+                <q className="my-2 italic">{currentSong.description}</q>
+                <p className="font-bold mr-auto">Escúchalo en tu plataforma preferida:</p>
+                <div className="w-full flex flex-wrap items-center justify-start mb-4">
                 {currentSong.links.length > 0 ? (
                   currentSong.links.map(
                     (
