@@ -15,30 +15,30 @@ import {
 import {useState} from "react";
 
 
-import tequieroati from "../../public/images/tequieroati2.webp";
-import luna from "../../public/images/luna.webp";
-import particulas from "../../public/images/particulas.webp";
-import taqnf from "../../public/images/taqnf.webp";
-import ardll from "../../public/images/ardll.webp";
-import galaxias from "../../public/images/galaxias.webp";
-import nightingale from "../../public/images/nightingale.webp";
-import paisaje from "../../public/images/paisaje.webp";
-import luminiscencia from "../../public/images/luminiscencia.webp";
-import lenaalfuego from "../../public/images/lenaalfuego.webp";
-import tiempodequerer from "../../public/images/tiempodequerer.webp";
-import petricor from "../../public/images/petricor.webp";
+import tequieroati from "../../public/images/pablo_marte_tequieroati2.webp";
+import luna from "../../public/images/pablo_marte_luna.webp";
+import particulas from "../../public/images/pablo_marte_particulas.webp";
+import taqnf from "../../public/images/pablo_marte_taqnf.webp";
+import ardll from "../../public/images/pablo_marte_ardll.webp";
+import galaxias from "../../public/images/pablo_marte_galaxias.webp";
+import nightingale from "../../public/images/pablo_marte_nightingale.webp";
+import paisaje from "../../public/images/pablo_marte_paisaje.webp";
+import luminiscencia from "../../public/images/pablo_marte_luminiscencia.webp";
+import lenaalfuego from "../../public/images/pablo_marte_lenaalfuego.webp";
+import tiempodequerer from "../../public/images/pablo_marte_tiempodequerer.webp";
+import petricor from "../../public/images/pablo_marte_petricor.webp";
 
 import {title} from "@/components/primitives";
 import {LinksList} from "@/components/linksList";
-import Head from "next/head";
 import {AngleLeftIcon} from "@/components/icons";
+import ShinyText from "@/components/ShinyText";
 
 const songsList = [
   {
     id: 12,
     title: "Luna",
     image: luna.src,
-    description: "La luz de tu amor en mi eterna oscuridad.",
+    description: 'Es la canción más íntima que he escrito, la que más me desnuda el alma y me hace sentir vulnerable. En sus versos escondí su nombre, como un secreto que solo ella conoce, para que siempre sepa que es para ella a quien siempre estuve esperando…',
     links: [
       {
         label: "Apple Music",
@@ -75,7 +75,7 @@ const songsList = [
     id: 11,
     title: "Te Quiero A Ti",
     image: tequieroati.src,
-    description: "Un eco eterno de deseo y certeza.",
+    description: 'Deje morir la idea por muchos años por falta de inspiración, al no encontrar el amor, pero recobro vida al sentir que podia volverme a enamorar y confiar...',
     links: [
       {
         label: "Apple Music",
@@ -112,7 +112,7 @@ const songsList = [
     id: 10,
     title: "Partículas",
     image: particulas.src,
-    description: "Fragmentos de un amor que trasciende el tiempo.",
+    description: 'Nada me salía bien, me enfermé, me llovían criticas por todos lados, pase de ser productivo a sentir que no avanzaba, me canse de lo malo del mundo que me quería morir…',
     links: [
       {
         label: "Apple Music",
@@ -149,7 +149,7 @@ const songsList = [
     id: 9,
     title: "Tu Amor Que Nunca Fue - Acoustic Version",
     image: taqnf.src,
-    description: "Un susurro al viento, esperando respuesta. \n Esta canción es una celebración del amor auténtico y el compromiso. Las letras transmiten un mensaje optimista sobre la conexión entre dos personas. La melodía es alegre y contagiosa.",
+    description: 'Soñaba con encontrar a esa persona que me hiciera sentir único, que me dijera con sus palabras lo que yo escribí en esta canción. Alguien que me hiciera sentir que valía la pena esperar…',
     links: [
       {
         label: "Apple Music",
@@ -186,7 +186,7 @@ const songsList = [
     id: 8,
     title: "Al Ritmo De La Luz",
     image: ardll.src,
-    description: "Un baile eterno entre sombras y estrellas.",
+    description: 'La escribí para aplicar a una maestría de composición, me aceptaron pero no tuve dinero para pagar así que todo lo que quedó fue ese sueño, guardado en las notas de esta canción.',
     links: [
       {
         label: "Apple Music",
@@ -223,7 +223,7 @@ const songsList = [
     id: 7,
     title: "Galaxias",
     image: galaxias.src,
-    description: "Dos almas orbitando un destino inevitable.",
+    description: 'La canción mas romántica que he hecho, cuando la escribí, me imaginé cantándosela a esa persona especial (ficticia) el día de mi boda. Es un pedacito de mi corazón convertido en melodía…',
     links: [
       {
         label: "Apple Music",
@@ -260,7 +260,7 @@ const songsList = [
     id: 6,
     title: "Nightingale",
     image: nightingale.src,
-    description: "La melodía secreta que solo el alma entiende. \n El ruiseñor simboliza la búsqueda de identidad y la expresión personal. La canción aborda el deseo de ser escuchado y entendido, utilizando el canto del ruiseñor como una metáfora de la libertad creativa. La producción es melódica, resaltando la vulnerabilidad en la voz de Marte.",
+    description: 'Siempre he pensado que atraes lo que eres, esta canción es mi carta al universo, una plegaria para que la vida me devuelva lo que he sembrado…',
     links: [
       {
         label: "Apple Music",
@@ -297,7 +297,7 @@ const songsList = [
     id: 5,
     title: "Paisaje",
     image: paisaje.src,
-    description: "La silueta de tu amor dibujada en el horizonte.",
+    description: 'Me cuesta mucho confiar en alguien, aunque nunca he querido admitirlo. Me aferré a la idea de que el amor todo lo puede, incluso cuando te sientes sentimentalmente solo y descalzo, caminando por el mundo…',
     links: [
       {
         label: "Apple Music",
@@ -334,7 +334,7 @@ const songsList = [
     id: 4,
     title: "Luminiscencia",
     image: luminiscencia.src,
-    description: "Destellos de un amor que nunca deja de brillar.",
+    description: 'Me cuesta mucho superar el pasado, la escribí cuando un amigo me contó la historia de su ex, pero terminó siendo también mi historia. Una forma de intentar que mis errores y mis heridas no sigan lastimando mi presente…',
     links: [
       {
         label: "Apple Music",
@@ -371,7 +371,7 @@ const songsList = [
     id: 3,
     title: "Leña Al Fuego",
     image: lenaalfuego.src,
-    description: "Un incendio de pasión que devora el tiempo. \n Esta canción aborda la nostalgia y el deseo, con el fuego como símbolo de pasión y recuerdos. Las letras son emotivas y evocadoras, invitando al oyente a recordar momentos significativos. La melodía suele ser intensa, capturando la esencia de la pasión que perdura a lo largo del tiempo.",
+    description: 'Desde que empece a ser mas consciente de la vida siento una presión constante: el tiempo no me alcanza para todo lo que quiero hacer. Pero también he aprendido que lo más importante es disfrutar lo que se tiene, porque somos como un fuego que, tarde o temprano, se apagará…',
     links: [
       {
         label: "Apple Music",
@@ -408,7 +408,7 @@ const songsList = [
     id: 2,
     title: "Tiempo De Querer",
     image: tiempodequerer.src,
-    description: "Un amor que florece en el instante perfecto.",
+    description: 'Los años mas felices de mi vida fueron los de mi infancia. No recuerdo haberme sentido tan amado como cuando vivía con mis abuelitos. Creo que, gracias a ellos, soy la persona que soy hoy.',
     links: [
       {
         label: "Apple Music",
@@ -445,7 +445,7 @@ const songsList = [
     id: 1,
     title: "Petricor",
     image: petricor.src,
-    description: "La nostalgia perfumada de un amor bajo la lluvia.",
+    description: 'Sobrepensar es mi superpoder, Desde muy joven, reflexionar sobre la vida se convirtió en mi vicio. Querer ir más allá de lo terrenal y superficial se hizo una necesidad, pero me costó entender que para lograrlo se necesita un equilibrio entre el cuerpo y el alma. Solo así se encuentra la felicidad real. Así que trato de llevarme las cosas con mas calma…',
     links: [
       {
         label: "Apple Music",
@@ -486,11 +486,6 @@ export default function MusicPage() {
 
   return (
     <>
-      <Head>
-        <title>Pablo Marte - New Projects && Tour</title>
-        <meta content="Stay tunned " name="description"/>
-        <link href="https://pablo-marte.com/" rel="canonical"/>
-      </Head>
       <div className="text-center w-full my-4 md:my-10">
         <h1 className={title()}>Música</h1>
       </div>
@@ -506,9 +501,12 @@ export default function MusicPage() {
               <Card
                 key={index}
                 isFooterBlurred
-                className="border-none flex w-2/3 md:w-1/5 "
+                className="border-none flex w-2/3 md:w-1/5 relative"
                 radius="lg"
               >
+                {songsList[index] === songsList[0] ? <div
+                    className="absolute top-4 -left-8 -rotate-45 z-10 w-28 bg-primary text-center font-bold">
+                  <ShinyText className='' disabled={false} speed={3} text='NEW'/></div> : null}
                 <Button
                     className="border-none size-full p-0"
                     variant="ghost"
@@ -518,8 +516,9 @@ export default function MusicPage() {
                     }}
                 >
                   {song.active ? <Image
-                      alt="Woman listening to music"
+                      alt={`Pablo Marte - ${song.title}`}
                       src={song.image}
+                      isZoomed={true}
                   /> : "Próximamente"}
                 </Button>
                 <CardFooter

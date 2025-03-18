@@ -1,23 +1,17 @@
 "use client";
 
-import { Button, Image, Link, useDisclosure } from "@heroui/react";
-import {
-  Modal,
-  ModalBody,
-  ModalContent,
-  ModalFooter,
-  ModalHeader,
-} from "@heroui/modal";
+import {Button, Image, Link, useDisclosure} from "@heroui/react";
+import {Modal, ModalBody, ModalContent, ModalFooter, ModalHeader,} from "@heroui/modal";
 
-import bio from "../public/images/bio.webp";
-import tequieroati from "../public/images/tequieroati.webp";
-import contact from "../public/images/contact.webp";
-import traveling from "../public/images/traveling.webp";
+import bio from "../public/images/pablo_marte_bio.webp";
+import luna from "../public/images/pablo_marte_Luna.webp";
+import contact from "../public/images/pablo_marte_contact.webp";
+import traveling from "../public/images/pablo_marte_traveling.webp";
 
 import SplitText from "@/components/splitText";
 import FadeContent from "@/components/fadeContent";
-import { ArrowRightIcon } from "@/components/icons";
-import { LinksList } from "@/components/linksList";
+import {ArrowRightIcon} from "@/components/icons";
+import {LinksList} from "@/components/linksList";
 
 export default function Home() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -25,32 +19,32 @@ export default function Home() {
   const links = [
     {
       label: "Apple Music",
-      link: "https://music.apple.com/mx/album/te-quiero-a-ti/1753498529?i=1753498530",
+      link: "https://music.apple.com/mx/album/luna-single/1778749802",
       color: "danger",
     },{
       label: "Spotify",
-      link: "https://open.spotify.com/intl-es/track/2eGbbEDMUKoGd3ezp4W3E4?si=f587856a076c4d26",
+      link: "https://open.spotify.com/intl-es/track/1Mj7FYp9wc3qjEVWBjdt55?si=45128da3574f44b2",
       color: "success",
     },{
       label: "Amazon Music",
-      link: "https://music.amazon.com.mx/albums/B0D7SYWBNW?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_BTthKgi5m4RitjELwPmCYaFGy",
+      link: "https://music.amazon.com.mx/albums/B0DMF2VPZJ?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=MX&ref=dm_sh_tfl8IVRTl1Yy2GK0n3iiHzuKF",
       color: "default",
     },
     {
       label: "Youtube Music",
-      link: "https://music.youtube.com/watch?v=V3LidtjtKns&feature=shared",
+      link: "https://music.youtube.com/watch?v=VJCVHxUpDMo&feature=shared",
       color: "danger",
     },
     {
       label: "Deezer",
-      link: "https://dzr.page.link/sDgfiTUW42gh4x1aA",
+      link: "https://dzr.page.link/rBpCqhTM7MLdNnJB6",
       color: "secondary",
     },
     {
       label: "qobuz",
-      link: "https://open.qobuz.com/album/wyclop3sa2yzb",
+      link: "https://open.qobuz.com/album/p21mo1490rmic",
       color: "default",
-    },
+    }
   ];
 
   return (
@@ -80,7 +74,7 @@ export default function Home() {
               destacado en la escena indie pop y alternativa. Su carrera musical
               comenzó de forma casual, pero pronto descubrió su pasión por la
               composición de canciones. Con un enfoque en letras introspectivas
-              y melodías suaves, Marte ha logrado resonar con un público amplio,
+              y melodías suaves, Pablo Marte ha logrado resonar con un público amplio,
               creando un estilo que combina elementos poéticos y sonoros que
               evocan emociones profundas.
             </p>
@@ -88,7 +82,7 @@ export default function Home() {
           <div className="flex">
             <Button
               as={Link}
-              className="my-6 w-full"
+              className="my-6 w-full font-bold"
               color="default"
               href="https://www.youtube.com/watch?v=BOaXHL09ROk&feature=youtu.be"
               isExternal={true}
@@ -134,38 +128,38 @@ export default function Home() {
             </h2>
           </div>
           <div className="flex mb-4 md:mb-6">
-            <q className="font-normal text-lg md:text-[18px] md:mx-10">
-              Esta canción es una celebración del amor auténtico y el
-              compromiso. Las letras transmiten un mensaje optimista sobre la
-              conexión entre dos personas. La melodía es alegre y contagiosa,
-              perfecta para los momentos de felicidad compartida.
-            </q>
+            <p className="font-normal text-lg md:text-[18px] md:mx-10">
+              <b>Luna</b> es la canción más íntima que he escrito en mi vida. Recuerdo que nació mientras cantaba el
+              coro: <q className="italic font-bold">Tú uh uh, eres la historia que no quiero olvidar...</q>. La compuse pensando en alguien muy especial,
+              una persona que ha cambiado mi forma de ver la vida. Su nombre está oculto dentro de la canción, para que
+              siempre sepa que es para ella sin necesidad de decirlo.
+            </p>
           </div>
-          <div className="flex w-1/2 md:w-1/3">
+          <div className="flex w-1/2">
             <Image
-              alt="Te quiero a ti cover image"
+                alt="Pablo Marte - Luna."
               className="object-contain"
               isBlurred={true}
               radius="none"
-              src={tequieroati.src}
+                src={luna.src}
             />
           </div>
           <div className="flex">
             <Button
-              className="w-fit my-6"
+              className="w-fit m-6 font-bold"
               color="default"
               size="lg"
               variant="faded"
               onPress={onOpen}
             >
-              Escucha &#34;Te Quiero a Ti&#34;
+              Escucha &#34;Luna&#34;
               <ArrowRightIcon />
             </Button>
           </div>
         </FadeContent>
         <div className="w-full md:w-1/2 flex px-8 md:px-10">
           <Image
-            alt="Viaja con una canción en el corazón"
+              alt="Pablo Marte viajando con un ukelele y con canción en el corazón."
             className="object-contain"
             radius="none"
             src={traveling.src}

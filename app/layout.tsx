@@ -11,19 +11,69 @@ import { fontTT } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
 import BackTop from "@/components/backTop";
 
-
 export const metadata: Metadata = {
+  metadataBase: new URL('https://pablo-marte.com'),
+  alternates: {
+    canonical: '/',
+  },
+  generator: "Next.js",
+  applicationName: "Pablo Marte Official Website",
+  referrer: "origin-when-cross-origin",
   title: {
     default: siteConfig.name,
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,
-  icons: {
-    icon: "/favicon.ico",
-  },
-  keywords:
+  keywords: [
     "Pablo Marte música, Indie pop mexicano, Artista alternativo mexicano, Música indie pop, Canciones introspectivas, Pablo Marte canciones, Pablo Marte discografía, Música alternativa México, Pop alternativo México, Pablo Marte álbumes, Música suave y poética, Artista mexicano indie, Música para el alma, Pablo Marte Spotify, Conciertos Pablo Marte",
+  ],
   robots: "index, follow",
+  authors: [{ name: "G0rz", url: "https://leonardobecerril.dev/" }],
+  creator: "Leonardo Becerril",
+  publisher: "Leonardo Becerril",
+  openGraph: {
+    title: 'Pablo Marte Official Website - News, Music, Tours & More',
+    description: 'Pablo Marte es un artista mexicano de indie pop y alternativa, con letras introspectivas y melodías suaves que evocan emociones profundas.',
+    url: 'https://pablo-marte.com/',
+    siteName: 'Pablo Marte Official',
+    images: [
+      {
+        url: 'https://pablo-marte.com/images/og.JPG', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://pablo-marte.com/images/og-alt.jpg', // Must be an absolute URL
+        width: 1800,
+        height: 1600,
+        alt: 'Pablo Marte',
+      },
+    ],
+    videos: [
+      {
+        url: 'https://pablo-marte.com/videos/Galaxias.mp4', // Must be an absolute URL
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: 'es_MX',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Pablo Marte Official Website - News, Music, Tours & More',
+    description: 'Pablo Marte es un artista mexicano de indie pop y alternativa, con letras introspectivas y melodías suaves que evocan emociones profundas.',
+    siteId: '1226703769351548929',
+    creator: '@XDeathZero',
+    creatorId: '1226703769351548929',
+    images: ['https://pablo-marte.com/images/og.JPG'], // Must be an absolute URL
+  },
+  icons: {
+    icon: "/icon.ico",
+    apple: '/apple-icon.png',
+    shortcut: '/apple-icon.png',
+  },
+  manifest: 'https://pablo-marte.com/manifest.json',
 };
 
 export const viewport: Viewport = {
@@ -40,12 +90,13 @@ export default function RootLayout({
 }) {
   return (
     <html suppressHydrationWarning lang="es">
-      <head>
-        <link href="/app/icon?<generated>" rel="icon" sizes="32x32" type="image/png" />
-      </head>
-      <body
+    <head>
+      <link rel='apple-touch-icon' sizes='180x180' href='/apple-icon.png'/>
+      <meta name="apple-mobile-web-app-title" content="Pablo Marte"/>
+    </head>
+    <body
         className={clsx(
-          "min-h-screen bg-background font-sansSerif antialiased",
+            "min-h-screen bg-background font-sansSerif antialiased",
           fontTT.variable,
         )}
       >
